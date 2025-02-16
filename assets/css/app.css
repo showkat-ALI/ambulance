@@ -3077,7 +3077,7 @@ select {
 		transition: all 0.3s ease-in-out;
 	}
 	.pix-header-fixed .toggle-menu {
-		top: 25px;
+		top: 15px;
 	}
 	.pix-header-fixed .toggle-menu .bar {
 		background: #333;
