@@ -740,11 +740,354 @@
                                   
                                   <!-- Modal -->
                                 <!-- Modal -->
-<div id="more-areas-modal" class="modal">
-    <div class="modal-content">
+                                <div id="unique-location-modal" class="unique-modal">
+                                    <div class="unique-modal-content">
+                                        <span class="unique-close" onclick="closeUniqueLocationModal()">&times;</span>
+                                        <h3>More Areas</h3>
+                                        <p id="unique-location-modal-content"></p>
+                                    </div>
+                                </div>
+                                
+                                <!-- CSS Styling -->
+                                <style>
+                                    .capsule {
+                                        display: inline-block;
+                                        padding: 1px 5px;
+                                        color: black;
+                                        border-radius: 20px;
+                                        margin: 3px;
+                                        font-size: 12px;
+                                    }
+                                
+                                    .see-more {
+                                        cursor: pointer;
+                                        color: blue;
+                                        text-decoration: underline;
+                                    }
+                                
+                                    /* Modal Styles */
+                                    .unique-modal {
+                                        display: none;
+                                        position: fixed;
+                                        z-index: 1000;
+                                        left: 0;
+                                        top: 0;
+                                        width: 100%;
+                                        height: 100%;
+                                        background-color: rgba(0, 0, 0, 0.5);
+                                        align-items: center;
+                                        justify-content: center;
+                                    }
+                                
+                                    .unique-modal-content {
+                                        background: white;
+                                        padding: 20px;
+                                        border-radius: 8px;
+                                        width: 300px;
+                                        text-align: center;
+                                        position: relative;
+                                    }
+                                
+                                    .unique-close {
+                                        position: absolute;
+                                        top: 10px;
+                                        right: 20px;
+                                        font-size: 20px;
+                                        cursor: pointer;
+                                    }
+                                </style>
+                                
+                                <!-- JavaScript -->
+                                <script>
+                                    document.addEventListener("DOMContentLoaded", function () {
+                                        let cards = document.querySelectorAll(".saaspik-icon-box-wrapper");
+                                
+                                        cards.forEach(card => {
+                                            let extraCapsules = card.querySelectorAll(".capsule.extra");
+                                            let seeMoreBtn = card.querySelector(".see-more");
+                                
+                                            // Hide extra capsules initially
+                                            extraCapsules.forEach(capsule => capsule.style.display = "none");
+                                
+                                            // Show "See More" button only if extra capsules exist
+                                            if (extraCapsules.length > 0) {
+                                                seeMoreBtn.style.display = "inline-block";
+                                
+                                                // Attach event listener to open modal when clicking "See More"
+                                                seeMoreBtn.addEventListener("click", function (event) {
+                                                    event.preventDefault();
+                                                    openUniqueLocationModal(extraCapsules);
+                                                });
+                                            }
+                                        });
+                                    });
+                                
+                                    function openUniqueLocationModal(extraCapsules) {
+                                        let modal = document.getElementById("unique-location-modal");
+                                        let modalContent = document.getElementById("unique-location-modal-content");
+                                
+                                        modalContent.innerHTML = ""; // Clear previous content
+                                
+                                        // Show only the first 3 extra items in the modal
+                                        for (let i = 0; i < Math.min(3, extraCapsules.length); i++) {
+                                            let newCapsule = extraCapsules[i].cloneNode(true);
+                                            newCapsule.style.display = "inline-block"; // Ensure they are visible in modal
+                                            modalContent.appendChild(newCapsule);
+                                        }
+                                
+                                        modal.style.display = "flex"; // Show modal when button is clicked
+                                    }
+                                
+                                    function closeUniqueLocationModal() {
+                                        document.getElementById("unique-location-modal").style.display = "none";
+                                    }
+                                </script>
+                                
+<!-- /.row -->
+                        </div><!-- /.col-md-5 -->
+
+                    </div><!-- /.row -->
+                </div><!-- /.banner-content-wrap -->
+            </div><!-- /.container -->
+        </section><!-- /.banner banner-two -->
+        <section class="banner banner-two md" >
+            <div class="vector-bg"><img src="media/banner/topshape.png" alt="circle"></div>
+            <div class="container">
+                <div class="banner-content-wrap" style="margin-top: -115px;">
+                        <div class="container mt-3">
+                            <div class="custom-row">
+                                <div class="custom-col">
+                                     <div class="headerservicebox-sm">
+                                       <img src="media/feature/s1.png" alt=""><br>
+                                     <div class="headerservice">Regular Ambulance</div>
+                                    </div>
+                                </div>
+                                 <div class="custom-col">
+                                     <div class="headerservicebox-sm">
+                                       <img src="media/feature/s2.png" alt=""><br>
+                                     <div class="headerservice">AC Ambulance</div>
+                                    </div>
+                                </div>
+                                 <div class="custom-col">
+                                     <div class="headerservicebox-sm">
+                                       <img src="media/feature/s3.png" alt=""><br>
+                                     <div class="headerservice">ICU Ambulance</div>
+                                    </div>
+                                </div>
+                                 <div class="custom-col">
+                                     <div class="headerservicebox-sm">
+                                       <img src="media/feature/s4.png" alt=""><br>
+                                     <div class="headerservice">Air Ambulance</div>
+                                    </div>
+                                </div>
+                                 <div class="custom-col">
+                                     <div class="headerservicebox-sm">
+                                       <img src="media/feature/s5.png" alt=""><br>
+                                     <div class="headerservice">Freezer Van</div>
+                                    </div>
+                                </div>
+                        
+                            </div>
+                        </div>
+
+                        <div class="custom-row-m">
+                        <div class="custom-col-m text-center">
+                            <div class="citybox">Dhaka</div>
+                        </div>
+                         <div class="custom-col-m text-center">
+                            <div class="citybox">Chattogram</div>
+                        </div>
+                         <div class="custom-col-m text-center">
+                            <div class="citybox">Sylhet</div>
+                        </div>
+                        
+                    </div>
+                     <div class="custom-row-m">
+                        <div class="custom-col-m text-center citycall">
+                          <a href="https://wa.me/+8801783976578"><img id="callIcon1" src="media/c.png" style="max-width:33px; max-height:33px" class="call-icon1"></a>
+                              <img id="callIcon2" src="media/w.png" style="max-width:37px; max-height:37px; margin-left:5px;" class="call-icon">
+                        </div>
+                         <div class="custom-col-m text-center citycall">
+                           <img id="callIcon3" src="media/c.png" style="max-width:33px; max-height:33px" class="call-icon1">
+                              <img id="callIcon4" src="media/w.png" style="max-width:37px; max-height:37px; margin-left:5px;" class="call-icon">
+                        </div>
+                         <div class="custom-col-m text-center citycall">
+                          <img id="callIcon5" src="media/c.png" style="max-width:33px; max-height:33px" class="call-icon1">
+                              <img id="callIcon6" src="media/w.png" style="max-width:37px; max-height:37px; margin-left:5px;" class="call-icon">
+                        </div>
+                     
+                    </div>
+
+                    <div class="row align-items-center">
+                        <div class="col-lg-12 pix-order-2">
+                            <div class="row text-center" id="mobileheadertext">
+                                <div class="banner-content">
+                                    <img src="media/ambu.png" class="banner-image" alt="Ambulance">
+                                    <h1 class="banner-title">
+                                        <span>
+
+                                        <span>24/7 Ambulance Service</span><br>Anytime, Anywhere Rapid Response
+                                        </span>
+
+                                    </h1>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <style>
+                       .banner-content {
+    position: relative;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    width: 100%;
+}
+
+.banner-image {
+    width: 140px;
+    height: 100px;
+    opacity: 0;
+    animation: slideInRight 1s ease-in-out forwards, swipeLeft 1s ease-in-out forwards 2s;
+}
+
+.banner-title {
+    opacity: 0;
+    flex-grow: 1; /* Ensures text takes full space */
+    animation: textSlideIn 1s ease-in-out forwards 3s;
+}
+
+/* Image slides in from right */
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+        opacity: 1;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Image moves out fully, then disappears */
+@keyframes swipeLeft {
+    to {
+        transform: translateX(-150%);
+        opacity: 0;
+        position: absolute; /* Removes it from document flow */
+    }
+}
+
+/* Text smoothly moves into the left */
+@keyframes textSlideIn {
+    from {
+        opacity: 0;
+        transform: translateX(140px); /* Moves into ambulance’s space */
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+                    </style>
+                    
+                    
+                    
+                    <!-- /.banner-content -->
+                                </div>
+                                <div class="container" style="margin-top: 220px;">
+
+                                    <div class="row">
+                                      <!-- Common Location Cards -->
+                                      <div class="col-lg-6 col-md-6">
+                                          <div class="saaspik-icon-box-wrapper style-eleven wow fadeInRight" data-wow-delay="0.3s">
+                                            <div class="pixsass-icon-box-content">
+                                                <h3 class="pixsass-icon-box-title"><a href="#">
+                                                    Dhaka North</a></h3>
+                                                <p class="capsule-container">
+                                                    <span class="capsule">Adabar</span> <span class="capsule">Adabar</span> <span class="capsule">Adabar</span> 
+                                                    <span class="capsule">Adabar</span> <span class="capsule">Adabar</span> <span class="capsule">Adabar</span> 
+                                                    <span class="capsule extra">Adabar</span> <span class="capsule extra">Adabar</span> <span class="capsule extra">Adabar</span>
+                                                    <span class="capsule extra">Adabar</span> <span class="capsule extra">Adabar</span> <span class="capsule extra">Adabar</span>
+                                                <a class="see-more" style="display: none;">See More</a>
+                
+                                                </p>
+                                                <button class="callnow"><i class="fa fa-phone"></i>&nbsp;&nbsp;0191919191</button>
+                                                <img id="callIcon2" src="media/w.png" style="max-width:37px; max-height:37px; margin-left:5px;" class="call-icon">
+                
+                                            </div>
+                                          </div>
+                                      </div>
+                                  
+                                      <div class="col-lg-6 col-md-6">
+                                          <div class="saaspik-icon-box-wrapper style-eleven wow fadeInRight" data-wow-delay="0.3s">
+                                            <div class="pixsass-icon-box-content">
+                                                <h3 class="pixsass-icon-box-title"><a href="#">Dhaka South</a></h3>
+                                                <p class="capsule-container">
+                                                    <span class="capsule">Adabar</span> <span class="capsule">Adabar</span> <span class="capsule">Adabar</span> 
+                                                    <span class="capsule">Adabar</span> <span class="capsule">Adabar</span> <span class="capsule">Adabar</span> 
+                                                    <span class="capsule extra">Adabar</span> <span class="capsule extra">Adabar</span> <span class="capsule extra">Adabar</span>
+                                                    <span class="capsule extra">Adabar</span> <span class="capsule extra">Adabar</span> <span class="capsule extra">Adabar</span>
+                                                <a class="see-more" style="display: none;">See More</a>
+                
+                                                </p>
+                                                <button class="callnow"><i class="fa fa-phone"></i>&nbsp;&nbsp;0191919191</button>
+                                                <img id="callIcon2" src="media/w.png" style="max-width:37px; max-height:37px; margin-left:5px;" class="call-icon">
+                
+                                            </div>
+                                          </div>
+                                      </div>
+                                  
+                                      <!-- New Location Cards -->
+                                      <div class="col-lg-6 col-md-6">
+                                          <div class="saaspik-icon-box-wrapper style-eleven wow fadeInRight" data-wow-delay="0.3s">
+                                            <div class="pixsass-icon-box-content">
+                                                <h3 class="pixsass-icon-box-title"><a href="#">Shyllet </a></h3>
+                                                <p class="capsule-container">
+                                                    <span class="capsule">Adabar</span> <span class="capsule">Adabar</span> <span class="capsule">Adabar</span> 
+                                                    <span class="capsule">Adabar</span> <span class="capsule">Adabar</span> <span class="capsule">Adabar</span> 
+                                                    <span class="capsule extra">Adabar</span> <span class="capsule extra">Adabar</span> <span class="capsule extra">Adabar</span>
+                                                    <span class="capsule extra">Adabar</span> <span class="capsule extra">Adabar</span> <span class="capsule extra">Adabar</span>
+                                                <a class="see-more" style="display: none;">See More</a>
+                
+                                                </p>
+                                                <button class="callnow"><i class="fa fa-phone"></i>&nbsp;&nbsp;0191919191</button>
+                                                <img id="callIcon2" src="media/w.png" style="max-width:37px; max-height:37px; margin-left:5px;" class="call-icon">
+                
+                                            </div>
+                                          </div>
+                                      </div>
+                                  
+                                      <div class="col-lg-6 col-md-6">
+                                          <div class="saaspik-icon-box-wrapper style-eleven wow fadeInRight" data-wow-delay="0.3s">
+                                            <div class="pixsass-icon-box-content">
+                                                <h3 class="pixsass-icon-box-title"><a href="#">Chittagong</a></h3>
+                                                <p class="capsule-container">
+                                                    <span class="capsule">Adabar</span> <span class="capsule">Adabar</span> <span class="capsule">Adabar</span> 
+                                                    <span class="capsule">Adabar</span> <span class="capsule">Adabar</span> <span class="capsule">Adabar</span> 
+                                                    <span class="capsule extra">Adabar</span> <span class="capsule extra">Adabar</span> <span class="capsule extra">Adabar</span>
+                                                    <span class="capsule extra">Adabar</span> <span class="capsule extra">Adabar</span> <span class="capsule extra">Adabar</span>
+                                                <a class="see-more" style="display: none;">See More</a>
+                
+                                                </p>
+                                                <button class="callnow"><i class="fa fa-phone"></i>&nbsp;&nbsp;0191919191</button>
+                                                <img id="callIcon2" src="media/w.png" style="max-width:37px; max-height:37px; margin-left:5px;" class="call-icon">
+                
+                                            </div>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                  
+                                  
+                                  <!-- Modal -->
+                                <!-- Modal -->
+<div id="areas-modal-md" class="modal-md">
+    <div class="modal-content-md">
         <span class="close" onclick="closeModal()">&times;</span>
         <h3>More Areas</h3>
-        <p id="more-areas-modal-content"></p>
+        <p id="areas-modal-content-md"></p>
     </div>
 </div>
 
@@ -762,7 +1105,7 @@
         cursor: pointer;
     }
 
-    .modal {
+    .modal-md {
         display: none;
         position: fixed;
         z-index: 1000;
@@ -775,7 +1118,7 @@
         justify-content: center;
     }
 
-    .modal-content {
+    .modal-content-md {
         background: white;
         padding: 20px;
         border-radius: 8px;
@@ -817,8 +1160,8 @@
     });
 
     function openModal(extraCapsules) {
-        let modal = document.getElementById("more-areas-modal");
-        let modalContent = document.getElementById("more-areas-modal-content");
+        let modal = document.getElementById("areas-modal-md");
+        let modalContent = document.getElementById("areas-modal-content-md");
 
         modalContent.innerHTML = ""; // Clear previous content
 
@@ -833,7 +1176,7 @@
     }
 
     function closeModal() {
-        document.getElementById("more-areas-modal").style.display = "none";
+        document.getElementById("areas-modal-md").style.display = "none";
     }
 </script>
 <!-- /.row -->
