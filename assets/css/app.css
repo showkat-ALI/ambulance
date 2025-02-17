@@ -4522,7 +4522,7 @@ select {
 		max-width: 700px;
 	}
 	.banner.banner-two {
-		height: 1090px;
+		height: 1170px;
 	}
 	.banner.banner-two .vector-bg {
 		height: 890px;
@@ -4538,7 +4538,7 @@ select {
 	.banner.banner-two .banner-content .banner-title {
 		font-size: 30px;
 		line-height: 50px;
-		margin-top: 20px;
+		margin-top: 15px;
 	}
 	.banner.banner-two .animate-promo-mockup {
 		width: 480px;
@@ -5983,7 +5983,7 @@ select {
 	        box-shadow: 0 20px 50px 0 rgba(14, 3, 52, 0.1);
 	background: #fff;
 	border-radius: 20px;
-	padding: 14px 14px;
+	padding: 12px 12px;
 	-webkit-transition: all 0.3s ease-in-out;
 	-o-transition: all 0.3s ease-in-out;
 	transition: all 0.3s ease-in-out;
@@ -18398,7 +18398,7 @@ Download Two
 }
 /*# sourceMappingURL=app.css.map */
 .xx{
-	margin-top: -200px;
+	margin-top: -279px;
 }
 .capsule{
   border: 1px solid #cdcdcd;
