@@ -4522,7 +4522,7 @@ select {
 		max-width: 700px;
 	}
 	.banner.banner-two {
-		height: 1170px;
+		height: 1125px;
 	}
 	.banner.banner-two .vector-bg {
 		height: 890px;
@@ -18067,7 +18067,7 @@ Download Two
 	position: relative;
 }
 #footer.footer-marketing .footer-inner {
-	padding: 116px 0 112px;
+	padding: 45px 0 45px;
 	position: relative;
 	z-index: 222;
 }
@@ -18398,7 +18398,7 @@ Download Two
 }
 /*# sourceMappingURL=app.css.map */
 .xx{
-	margin-top: -279px;
+	margin-top: -235px;
 }
 .capsule{
   border: 1px solid #cdcdcd;
