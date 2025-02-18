@@ -26,7 +26,7 @@
     <link rel="stylesheet" href="dependencies/magnific-popup/css/magnific-popup.css" type="text/css">
     <link rel="stylesheet" href="dependencies/components-elegant-icons/css/elegant-icons.min.css" type="text/css">
     <link rel="stylesheet" href="dependencies/simple-line-icons/css/simple-line-icons.css" type="text/css">
-
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 
     <!-- Site Stylesheet -->
@@ -71,13 +71,28 @@
     border-radius: 50%;
     animation: shadowBorder1 1.5s infinite alternate;
 }
-
+.scrol-special{
+    margin-top: 25px;
+}
 </style>
 
 </head>
 
 <body id="home-version-1" class="home-color-two" data-style="default">
-
+    <script>
+        $(document).ready(function() {
+            // Smooth scrolling for all anchor links
+            $('a[href^="#"]').on('click', function(event) {
+                event.preventDefault(); // Prevent default anchor click behavior
+                var target = $(this.getAttribute('href'));
+                if (target.length) {
+                    $('html, body').animate({
+                        scrollTop: target.offset().top
+                    }, 1000); // Adjust the duration as needed
+                }
+            });
+        });
+    </script>
     <a href="#main_content" data-type="section-switch" class="return-to-top">
         <i class="fa fa-chevron-up"></i>
     </a>
@@ -150,8 +165,8 @@
                         <div class="menu-wrapper" data-top="992">
                             <ul class="site-main-menu">
                                 <li><a href="index.html">Home</a></li>
-                                <li><a href="about.html">Services</a></li>
-                                <li><a href="blog.html">Blogs</a></li>
+                                <li><a href="#service">Services</a></li>
+                                <li><a href="#coverage">Coverage</a></li>
                                 <li><a href="contact.html">Contact</a></li>
                             </ul>
 
@@ -1586,17 +1601,19 @@
                     </div><!-- /.row -->
                 </div><!-- /.banner-content-wrap -->
             </div><!-- /.container -->
-        </section><!-- /.banner banner-two -->
+        </section>
+        <!-- /.banner banner-two -->
 
       <!--============================-->
         <!--=         Feature         =-->
         <!--============================-->
+<div id="service" >
 
         <section class="featured-nine" >
             <div class="container">
                 <div class="section-title style-five text-center">
                    
-                    <h2 class="title wow pixFadeUp" data-wow-delay="0.2s">
+                    <h2 class="title wow pixFadeUp scrol-special" data-wow-delay="0.2s">
                        OUR SERVICES
                     </h2>
                 </div><!-- /.section-title -->
@@ -1685,64 +1702,68 @@
                 </div>
             </div><!-- /.container -->
         </section><!-- /.featured -->
+    </div>
 
         <!--============================-->
         <!--=         Tabs         =-->
         <!--============================-->
-        <section class="app-tabs">
+        <div id="coverage">
+            <section class="app-tabs" >
 
-            <div class="container-wrap bg-color-one">
-                <div class="container">
-                    <div id="pix-tabs" class="tabs-three">
-                        <div class="row">
-                            <div class="col-lg-5">
-                           <div class="about-tax-content">
-                            <div class="section-title">
-
-                                <h2 class="title wow pixFadeUp">
-                                    24Hour Emergency Ambulance Service Coverage Areas
-                                </h2>
+                <div class="container-wrap bg-color-one">
+                    <div class="container">
+                        <div id="pix-tabs" class="tabs-three">
+                            <div class="row">
+                                <div class="col-lg-5">
+                               <div class="about-tax-content">
+                                <div class="section-title">
+    
+                                    <h2 class="title wow pixFadeUp ">
+                                        24Hour Emergency Ambulance Service Coverage Areas
+                                    </h2>
+                                </div>
+                                <!-- /.section-title -->
+    
+                                <p class="wow pixFadeUp" data-wow-delay="0.3s">
+                                    Daft cuppa cockup a at public school squiffy wellies codswallop I don't want no agro bleeding Elizabeth Charles a blinding shot he legged.!
+                                </p>
+    
+                                <ul class="list-items wow pixFadeUp" data-wow-delay="0.5s">
+                                    <li>Dhaka City Corporation North</li>
+                                    <li>Dhaka City Corporation North</li>
+                                    <li>Chattogram City</li>
+                                    <li>Sylhet City</li>
+                                    <li>Rajshahi City</li>
+                                    <li>Khulna City</li>
+                                    <li>Barisal City</li>
+                                    <li>Bogra City</li>
+                                </ul>
+    
+                              <!--   <a href="#" class="pix-btn btn-two wow fadeInUp" data-wow-delay="0.7s">Learn More</a> -->
                             </div>
-                            <!-- /.section-title -->
-
-                            <p class="wow pixFadeUp" data-wow-delay="0.3s">
-                                Daft cuppa cockup a at public school squiffy wellies codswallop I don't want no agro bleeding Elizabeth Charles a blinding shot he legged.!
-                            </p>
-
-                            <ul class="list-items wow pixFadeUp" data-wow-delay="0.5s">
-                                <li>Dhaka City Corporation North</li>
-                                <li>Dhaka City Corporation North</li>
-                                <li>Chattogram City</li>
-                                <li>Sylhet City</li>
-                                <li>Rajshahi City</li>
-                                <li>Khulna City</li>
-                                <li>Barisal City</li>
-                                <li>Bogra City</li>
-                            </ul>
-
-                          <!--   <a href="#" class="pix-btn btn-two wow fadeInUp" data-wow-delay="0.7s">Learn More</a> -->
-                        </div>
-                        <!-- /.service-content -->
-                            </div>
-                            <!-- /.col-lg-5 -->
-                            <div class="col-lg-7">
-                               
+                            <!-- /.service-content -->
+                                </div>
+                                <!-- /.col-lg-5 -->
+                                <div class="col-lg-7">
                                    
-                                                <img src="media/map.png" alt="sasspik tab" id="map">
-                    
-                              
-
+                                       
+                                                    <img src="media/map.png" alt="sasspik tab" id="map">
+                        
+                                  
+    
+                                </div>
+                                <!-- /.col-lg-7 -->
                             </div>
-                            <!-- /.col-lg-7 -->
+                            <!-- /.row -->
                         </div>
-                        <!-- /.row -->
                     </div>
+                    <!-- /.container -->
                 </div>
-                <!-- /.container -->
-            </div>
-            <!-- /.container-wrap -->
-
-        </section>
+                <!-- /.container-wrap -->
+    
+            </section>
+        </div>
+      
         <!-- /.job-bord-tabs -->
         <!--=============================-->
         <!--=         Blog Post         =-->
