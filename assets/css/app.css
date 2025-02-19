@@ -3192,6 +3192,16 @@ select {
 	margin-bottom: 10px;
 	margin-left: 30px;
 }
+@media screen and (max-width:400px) {
+	.banner .banner-content .banner-title {
+		font-size: 37px;
+		line-height: 40px;
+		font-weight: 400;
+		color: #fff;
+		margin-bottom: 10px;
+		margin-left: 0px;
+	}
+}
 .banner .banner-content .banner-title span {
 	font-weight: 800;
 }
@@ -4938,7 +4948,7 @@ select {
 		height: 840px;
 	}
 	.banner.banner-two .banner-content .banner-title {
-		font-size: 32px;
+		font-size: 20px;
 		line-height: 40px;
 	}
 	.banner.banner-two .banner-content .description {
@@ -18512,8 +18522,8 @@ Download Two
 }
 
 .headerservicediv{
-	margin-bottom:0px;
-	margin-top:-70px;
+	margin-bottom:10px;
+	margin-top:-85px;
 }
 .custom-row {
 display: flex;
@@ -18556,7 +18566,7 @@ background-color: #fff;
  @media (max-width: 768px) {
 .banner-title{
 	line-height: 1.2!important;
-	margin-left: -8px!important;
+	/* margin-left: -8px!important; */
 	text-align: center;
 }
 }
