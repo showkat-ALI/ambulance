@@ -3142,6 +3142,7 @@ select {
 	.md{
 		display: none;
 	}
+	
 }
 @media screen and (min-width: 992px ) and (max-width:1201px){
 	.mm{
@@ -3150,6 +3151,9 @@ select {
 	.xx{
 		display: none;
 	}
+	
+	
+
 }
 @media screen and (min-width: 1202px) {
 	.mm{
@@ -3158,6 +3162,14 @@ select {
 	.md{
 		display: none;
 	}
+	
+	
+	}
+	@media screen and (max-width:400px) {
+		.banner-title{
+			font-size: 16px !important;
+		}
+		
 	}
 /*--------------------------------------------------------------
   ##  Banner
@@ -3177,7 +3189,7 @@ select {
 	line-height: 40px;
 	font-weight: 400;
 	color: #fff;
-	margin-bottom: 20px;
+	margin-bottom: 10px;
 	margin-left: 30px;
 }
 .banner .banner-content .banner-title span {
@@ -4792,7 +4804,7 @@ select {
 		        transform: translateY(0);
 	}
 	.banner.banner-two .banner-content {
-		margin-top: 10px;
+		margin-top: 2px;
 		text-align: center;
 	}
 	.banner.banner-two .banner-content .banner-title {
@@ -18500,8 +18512,8 @@ Download Two
 }
 
 .headerservicediv{
-	margin-bottom:20px;
-	margin-top:-65px;
+	margin-bottom:0px;
+	margin-top:-70px;
 }
 .custom-row {
 display: flex;
@@ -18543,9 +18555,9 @@ background-color: #fff;
         }
  @media (max-width: 768px) {
 .banner-title{
-	font-size: 25px!important;
 	line-height: 1.2!important;
-	margin-left: -10px!important;
+	margin-left: -8px!important;
+	text-align: center;
 }
 }
 #map{

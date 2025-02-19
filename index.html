@@ -254,7 +254,7 @@
                         <div class="col-lg-6 pix-order-2 pullup">
                      <div class="row">
                         <div class="banner-content">
-                            <img src="media/ambu.png" class="banner-image" alt="Ambulance">
+                            <!-- <img src="media/ambu.png" class="banner-image" alt="Ambulance"> -->
                             <h1 class="banner-title">
                                 <span>24/7 Ambulance Service</span><br>Anytime, Anywhere Rapid Response
                             </h1>
@@ -265,55 +265,10 @@
     display: flex;
     align-items: center;
 }
-
-.banner-image {
-    width: 100px; /* Adjust size as needed */
-    height: auto;
-    opacity: 0;
-    animation: slideInRight 1s ease-in-out forwards, disappear 0.5s ease-in-out forwards 2s;
+.banner-title{
+    font-size: 30px 
 }
 
-/* Text smoothly moves left when image disappears */
-.banner-title {
-    opacity: 0;
-    transition: margin-left 0.5s ease-in-out; /* Smooth transition */
-    animation: fadeIn 1s ease-in-out forwards;
-    animation-delay: 1s; /* Text appears after image */
-}
-
-/* Image slides in from right */
-@keyframes slideInRight {
-    from {
-        transform: translateX(100%);
-        opacity: 0;
-    }
-    to {
-        transform: translateX(0);
-        opacity: 1;
-    }
-}
-
-/* Image disappears & text shifts left */
-@keyframes disappear {
-    to {
-        opacity: 0;
-        width: 0;
-        margin-right: 0;
-        overflow: hidden;
-    }
-}
-
-/* Text fading in */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateX(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
 
                             </style>
                             <div class="container">
@@ -553,7 +508,7 @@
     border-radius: 20px;
     margin: 2px;
     font-size: 12px;
-    max-width: 126px;
+    min-width: 126px;
     height: 32px;
     font-size: 12px;
     white-space: nowrap;
@@ -665,7 +620,7 @@
         <section class="banner banner-two mm" id="home" >
             <div class="vector-bg"><img src="media/banner/topshape.png" alt="circle"></div>
             <div class="container">
-                <div class="banner-content-wrap" style="margin-top: -50px;">
+                <div class="banner-content-wrap" style="margin-top: -30px;">
                         <div class="container mt-3">
                             <div class="custom-row">
                                 <div class="custom-col">
@@ -734,8 +689,8 @@
                         <div class="col-lg-12 pix-order-2">
                             <div class="row text-center" id="mobileheadertext">
                                 <div class="banner-content">
-                                    <img src="media/ambu.png" class="banner-image" alt="Ambulance">
-                                    <h1 class="banner-title">
+                                    <!-- <img src="media/ambu.png" class="banner-image" alt="Ambulance"> -->
+                    <h1 class="banner-title">
                                         <span>
 
                                         <span>24/7 Ambulance Service</span><br>Anytime, Anywhere Rapid Response
@@ -755,21 +710,25 @@
     overflow: hidden;
     width: 100%;
 }
+.banner-title{
+    font-size: 18px 
+}
 
-.banner-image {
+/* .banner-image {
     width: 140px;
     height: 100px;
     opacity: 0;
     animation: slideInRight 1s ease-in-out forwards, swipeLeft 1s ease-in-out forwards 2s;
-}
+} */
 
-.banner-title {
+/* .banner-title {
     opacity: 0;
-    flex-grow: 1; /* Ensures text takes full space */
+    flex-grow: 1;
     animation: textSlideIn 1s ease-in-out forwards 3s;
-}
+} */
 
 /* Image slides in from right */
+/*
 @keyframes slideInRight {
     from {
         transform: translateX(100%);
@@ -781,26 +740,26 @@
     }
 }
 
-/* Image moves out fully, then disappears */
+
 @keyframes swipeLeft {
     to {
         transform: translateX(-150%);
         opacity: 0;
-        position: absolute; /* Removes it from document flow */
+        position: absolute; 
     }
 }
 
-/* Text smoothly moves into the left */
+
 @keyframes textSlideIn {
     from {
         opacity: 0;
-        transform: translateX(140px); /* Moves into ambulance’s space */
+        transform: translateX(140px);
     }
     to {
         opacity: 1;
         transform: translateX(0);
     }
-}
+} */
 
                     </style>
                     
@@ -1026,13 +985,20 @@
                                 
                                 <!-- CSS Styling -->
                                 <style>
-                                     .capsule{
+                                   .capsule {
     display: inline-block;
     padding: 1px 2px;
     color: black;
     border-radius: 20px;
     margin: 2px;
-    font-size: 10px;
+    font-size: 12px;
+    max-width: 126px;
+    height: 32px;
+    font-size: 12px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    vertical-align: middle;
 }
                                 
                                     .see-more {
@@ -1198,7 +1164,6 @@
                         <div class="col-lg-12 pix-order-2">
                             <div class="row text-center" id="mobileheadertext">
                                 <div class="banner-content">
-                                    <img src="media/ambu.png" class="banner-image" alt="Ambulance">
                                     <h1 class="banner-title">
                                         <span>
 
@@ -1220,50 +1185,8 @@
     width: 100%;
 }
 
-.banner-image {
-    width: 140px;
-    height: 100px;
-    opacity: 0;
-    animation: slideInRight 1s ease-in-out forwards, swipeLeft 1s ease-in-out forwards 2s;
-}
-
-.banner-title {
-    opacity: 0;
-    flex-grow: 1; /* Ensures text takes full space */
-    animation: textSlideIn 1s ease-in-out forwards 3s;
-}
-
-/* Image slides in from right */
-@keyframes slideInRight {
-    from {
-        transform: translateX(100%);
-        opacity: 1;
-    }
-    to {
-        transform: translateX(0);
-        opacity: 1;
-    }
-}
-
-/* Image moves out fully, then disappears */
-@keyframes swipeLeft {
-    to {
-        transform: translateX(-150%);
-        opacity: 0;
-        position: absolute; /* Removes it from document flow */
-    }
-}
-
-/* Text smoothly moves into the left */
-@keyframes textSlideIn {
-    from {
-        opacity: 0;
-        transform: translateX(140px); /* Moves into ambulance’s space */
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
+.banner-title{
+    font-size: 30px 
 }
 
                     </style>
@@ -1494,13 +1417,20 @@
 </div>
 
 <style>
- .capsule{
+ .capsule {
     display: inline-block;
     padding: 1px 2px;
     color: black;
     border-radius: 20px;
     margin: 2px;
-    font-size: 10px;
+    font-size: 12px;
+    max-width: 126px;
+    height: 32px;
+    font-size: 12px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    vertical-align: middle;
 }
 
     .see-more {
