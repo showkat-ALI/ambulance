@@ -3142,6 +3142,9 @@ select {
 	.md{
 		display: none;
 	}
+	.banner-content{
+		justify-content: center;
+	}
 	
 }
 @media screen and (min-width: 992px ) and (max-width:1201px){
@@ -3150,6 +3153,9 @@ select {
 	}
 	.xx{
 		display: none;
+	}
+	.banner-content{
+		justify-content: center;
 	}
 	
 	
@@ -3161,6 +3167,9 @@ select {
 	}
 	.md{
 		display: none;
+	}
+	.banner-content{
+		justify-content: flex-start;
 	}
 	
 	
@@ -18583,6 +18592,6 @@ width: 33%; /* Each column takes exactly 20% of the row */
 text-align: center;
 padding: 1px;
 }
-#mobileheadertext{
+/* #mobileheadertext{
 	margin-left: -10px;
-}
+} */
