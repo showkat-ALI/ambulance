@@ -2901,7 +2901,21 @@ select {
 .home-color-two .return-to-top:hover > i {
 	text-shadow: 0px -50px #fff, 0px 0px #fff;
 }
-
+.call-icon-1{
+	border-radius: 50%;
+    animation: shadowBorder33 1.5s infinite alternate;
+}
+@keyframes shadowBorder33 {
+    0% {
+        box-shadow: 0 0 0 0px #128C7E;
+    }
+    50% {
+        box-shadow: 0 0 0 4px #128C7E;
+    }
+    100% {
+        box-shadow: 0 0 0 0px #128C7E;
+    }
+}
 @media (max-width: 991px) {
 	.toggle-menu {
 		position: absolute;
