@@ -2944,7 +2944,7 @@ select {
 	}
 	.site-header .header-inner {
 		text-align: center;
-		padding: 15px 0;
+		padding: 5px 0;
 	}
 	.site-header .header-inner .site-nav .nav-right {
 		margin-left: 20px;
@@ -4567,7 +4567,7 @@ select {
 		max-width: 700px;
 	}
 	.banner.banner-two {
-		height: 1125px;
+		height: 1098px;
 	}
 	.banner.banner-two .vector-bg {
 		height: 890px;
@@ -18443,7 +18443,7 @@ Download Two
 }
 /*# sourceMappingURL=app.css.map */
 .xx{
-	margin-top: -235px;
+	margin-top: -208px;
 }
 .capsule{
   border: 1px solid #cdcdcd;
