@@ -6036,7 +6036,7 @@ select {
 }
 @media screen and (max-width:400px) {
 	.saaspik-icon-box-wrapper.style-eleven{
-	padding: 12px 2px;
+	padding: 12px 12px;
 
 	}
 }
@@ -18452,6 +18452,16 @@ Download Two
 	margin-top: -208px;
 }
 .capsule{
+  border: 1px solid #cdcdcd;
+  padding: 1px 4px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 16px;
+}
+.capsule-mm{
   border: 1px solid #cdcdcd;
   padding: 1px 4px;
   text-align: center;
