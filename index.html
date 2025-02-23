@@ -472,39 +472,7 @@
                             </div>
                         </div>
                     </div>
-                
-                    <!-- New Location Cards -->
-                    <div class="col-lg-6 col-md-6">
-                        <div class="saaspik-icon-box-wrapper style-eleven wow fadeInRight" data-wow-delay="0.3s">
-                            <div class="pixsass-icon-box-content">
-                                <h3 class="pixsass-icon-box-title"><a href="#">Shyllet</a></h3>
-                                <p class="capsule-container-mm">
-                                        <span class="capsule">Kotwali </span>
-                                        <span class="capsule">Jalalabad</span>
-                                        <span class="capsule">Airport</span>
-                                        <span class="capsule">Moglabazar</span> 
-                                        <span class="capsule"> South Surma
-                                        </span>
-                                        <span class="capsule"> Shah Poran (R.)</span>
-                                        <span class="capsule"> Golapganj  </span>
-                                        <span class="capsule"> Osmaninagar </span>
-                                    
-
-                                 
-                                  
-
-                                </p>
-                                <button class="callnow"><i class="fa fa-phone"></i>&nbsp;&nbsp;0191919191</button>
-                                <a href="https://wa.me/+8801783976578" style="">
-
-                                <img id="callIcon2" src="media/whatsapp.png"style="max-width:37px; max-height:37px; margin-left:5px; padding:3px" class="call-icon">
-                            </a>
-
-                            </div>
-                        </div>
-                    </div>
-                
-                    <div class="col-lg-6 col-md-6">
+                <div class="col-lg-6 col-md-6">
                         <div class="saaspik-icon-box-wrapper style-eleven wow fadeInRight" data-wow-delay="0.3s">
                             <div class="pixsass-icon-box-content">
                                 <h3 class="pixsass-icon-box-title"><a href="#">Chittagong</a></h3>
@@ -578,6 +546,38 @@
                             </div>
                         </div>
                     </div>
+                    <!-- New Location Cards -->
+                    <div class="col-lg-6 col-md-6">
+                        <div class="saaspik-icon-box-wrapper style-eleven wow fadeInRight" data-wow-delay="0.3s">
+                            <div class="pixsass-icon-box-content">
+                                <h3 class="pixsass-icon-box-title"><a href="#">Shyllet</a></h3>
+                                <p class="capsule-container-mm">
+                                        <span class="capsule">Kotwali </span>
+                                        <span class="capsule">Jalalabad</span>
+                                        <span class="capsule">Airport</span>
+                                        <span class="capsule">Moglabazar</span> 
+                                        <span class="capsule"> South Surma
+                                        </span>
+                                        <span class="capsule"> Shah Poran (R.)</span>
+                                        <span class="capsule"> Golapganj  </span>
+                                        <span class="capsule"> Osmaninagar </span>
+                                    
+
+                                 
+                                  
+
+                                </p>
+                                <button class="callnow"><i class="fa fa-phone"></i>&nbsp;&nbsp;0191919191</button>
+                                <a href="https://wa.me/+8801783976578" style="">
+
+                                <img id="callIcon2" src="media/whatsapp.png"style="max-width:37px; max-height:37px; margin-left:5px; padding:3px" class="call-icon">
+                            </a>
+
+                            </div>
+                        </div>
+                    </div>
+                
+                    
                 </div>
             </div>
 
@@ -587,7 +587,7 @@
 <div id="location-details-modal" class="custom-modal">
     <div class="custom-modal-content">
         <span class="custom-close" onclick="closeLocationDetailsModal()">&times;</span>
-        <h3>More Areas</h3>
+        <h3 class="modal-heading"></h3>
         <p id="location-details-modal-content"></p>
     </div>
 </div>
@@ -652,11 +652,12 @@
 <script>
     document.addEventListener("DOMContentLoaded", function () {
         let cards = document.querySelectorAll(".saaspik-icon-box-wrapper");
-
+        let modalContent= document.querySelector("modal-heading")
         cards.forEach(card => {
             let extraCapsules = card.querySelectorAll(".capsule.extra");
             let seeMoreBtn = card.querySelector(".see-more");
-
+            let modalHeading = document.querySelector(".modal-heading");
+            let cardTitle = card.querySelector(".pixsass-icon-box-title")?.innerText || "Details";
             // Hide extra capsules initially
             extraCapsules.forEach(capsule => capsule.style.display = "none");
 
@@ -667,18 +668,18 @@
                 // Attach event listener to open modal when clicking "See All"
                 seeMoreBtn.addEventListener("click", function (event) {
                     event.preventDefault();
-                    openLocationDetailsModal(extraCapsules);
+                    openLocationDetailsModal(extraCapsules,cardTitle);
                 });
             }
         });
     });
 
-    function openLocationDetailsModal(extraCapsules) {
+    function openLocationDetailsModal(extraCapsules,title) {
         let modal = document.getElementById("location-details-modal");
         let modalContent = document.getElementById("location-details-modal-content");
-
+        let modalHeading = document.querySelector(".modal-heading");
         modalContent.innerHTML = ""; // Clear previous content
-
+        modalHeading.innerText = title; 
         // Show only the first 3 extra items in the modal
         for (let i = 0; i < extraCapsules.length; i++) {
     let newCapsule = extraCapsules[i].cloneNode(true);
@@ -694,6 +695,55 @@
         document.getElementById("location-details-modal").style.display = "none";
     }
 </script>
+<!-- <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        let cards = document.querySelectorAll(".saaspik-icon-box-wrapper");
+
+        cards.forEach(card => {
+            let extraCapsules = card.querySelectorAll(".capsule.extra");
+            let seeMoreBtn = card.querySelector(".see-more");
+            let cardTitle = card.querySelector(".pixsass-icon-box-title")?.innerText || "Details"; // Get title or fallback
+
+            // Hide extra capsules initially
+            extraCapsules.forEach(capsule => capsule.style.display = "none");
+
+            // Show "See All" button only if extra capsules exist
+            if (extraCapsules.length > 0) {
+                seeMoreBtn.style.display = "inline-block";
+
+                // Attach event listener to open modal when clicking "See All"
+                seeMoreBtn.addEventListener("click", function (event) {
+                    event.preventDefault();
+                    openLocationDetailsModal(extraCapsules, cardTitle); // Pass the title here
+                });
+            }
+        });
+    });
+
+    function openLocationDetailsModal(extraCapsules, title) {
+        let modal = document.getElementById("location-details-modal");
+        let modalContent = document.getElementById("location-details-modal-content");
+        let modalHeading = document.querySelector(".modal-heading"); // Get the modal heading element
+
+        modalContent.innerHTML = ""; // Clear previous content
+        modalHeading.innerText = title; // Set the dynamic title
+
+        // Show only the first 3 extra items in the modal
+        extraCapsules.forEach((capsule, index) => {
+            if (index < 3) {
+                let newCapsule = capsule.cloneNode(true);
+                newCapsule.style.display = "inline-block"; // Ensure they are visible in modal
+                modalContent.appendChild(newCapsule);
+            }
+        });
+
+        modal.style.display = "flex"; // Show modal when button is clicked
+    }
+
+    function closeLocationDetailsModal() {
+        document.getElementById("location-details-modal").style.display = "none";
+    }
+</script> -->
 
                 <!-- /.col-lg-3 col-md-6 -->
                 </div><!-- /.row -->
@@ -982,6 +1032,72 @@
                 </div>
             </div>
         </div>
+        <div class="col-lg-6 col-md-6">
+            <div class="saaspik-icon-box-wrapper style-eleven wow fadeInRight" data-wow-delay="0.3s">
+                <div class="pixsass-icon-box-content">
+                    <h3 class="pixsass-icon-box-title"><a href="#">Chittagong</a></h3>
+                    <p class="capsule-container-mm">
+                            <span class="capsule-mm">Akbarshah 
+                            </span> <span class="capsule-mm">Bakalia 
+                            </span>
+                            <span class="capsule-mm">Bandar 
+                            </span> 
+                            <span class="capsule-mm">Bayazid 
+                            </span> 
+                            <span class="capsule-mm">Chandgaon 
+                            </span> 
+                            <span class="capsule-mm">
+                                Halishahar 
+                            </span>
+                            <span class="capsule-mm">Khulshi 
+                            </span>
+                            <span class="capsule-mm">Kotwali 
+                            </span>
+                            <a class="see-more" style="display: none; font-size: 12px; font-weight: 700; margin-left: 10px;">See All</a>
+        
+                        <span class="capsule-mm extra">Akbarshah 
+                        </span> <span class="capsule-mm extra">Bakalia 
+                        </span>
+                        <span class="capsule-mm extra">Bandar 
+                        </span> 
+                        <span class="capsule-mm extra">Bayazid 
+                        </span> 
+                       
+                        <span class="capsule-mm extra">
+                            Halishahar 
+                        </span>
+                        <span class="capsule-mm extra">Khulshi 
+                        </span>
+                        <span class="capsule-mm extra">Chandgaon 
+                        </span>
+                        
+                        
+                        
+                        <div style="display: flex;">
+                            <span class="capsule-mm extra">Double Mooring
+                            </span> <span class="capsule-mm extra">Sadarghat 
+                            </span> 
+                        </div>
+        
+                        <span class="capsule-mm extra">EPZ 
+                        </span>
+                        <span class="capsule-mm extra">Karnaphuli 
+                        </span> <span class="capsule-mm extra">Patenga 
+                        </span> <span class="capsule-mm extra">Panchlaish 
+                        </span>
+                        <span class="capsule-mm extra">Pahartali 
+                        </span>
+                        <span class="capsule-mm extra">Kotwali  
+                        </span>
+                        
+                    </p>
+                    <button class="callnow"><i class="fa fa-phone"></i>&nbsp;&nbsp;0191919191</button>
+                    <a href="https://wa.me/+8801783976578" style="">
+                        <img id="callIcon2" src="media/whatsapp.png" style="max-width:37px; max-height:37px; margin-left:5px; padding:3px" class="call-icon">
+                    </a>
+                </div>
+            </div>
+        </div>
         
     
         <!-- New Location Cards -->
@@ -1085,7 +1201,7 @@
                                 <div id="unique-location-modal" class="unique-modal">
                                     <div class="unique-modal-content">
                                         <span class="unique-close" onclick="closeUniqueLocationModal()">&times;</span>
-                                        <h3>More Areas</h3>
+                                        <h3 class="modal-heading">More Areas</h3>
                                         <p id="unique-location-modal-content"></p>
                                     </div>
                                 </div>
@@ -1167,7 +1283,8 @@
                                         cards.forEach(card => {
                                             let extraCapsules = card.querySelectorAll(".capsule-mm.extra");
                                             let seeMoreBtn = card.querySelector(".see-more");
-                                
+                                            // let cardTitle = card.querySelector(".pixsass-icon-box-title")?.innerText || "Details";
+
                                             // Hide extra capsules initially
                                             extraCapsules.forEach(capsule => capsule.style.display = "none");
                                 
@@ -1187,9 +1304,11 @@
                                     function openUniqueLocationModal(extraCapsules) {
                                         let modal = document.getElementById("unique-location-modal");
                                         let modalContent = document.getElementById("unique-location-modal-content");
-                                
+                                        // let modalHeading = document.querySelector(".modal-heading");
+
                                         modalContent.innerHTML = ""; // Clear previous content
-                                
+                                        // modalHeading.innerText = title; 
+
                                         // Show only the first 3 extra items in the modal
                                         for (let i = 0; i < extraCapsules.length; i++) {
     let newCapsule = extraCapsules[i].cloneNode(true);
