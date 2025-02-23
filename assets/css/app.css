@@ -6034,6 +6034,12 @@ select {
 	transition: all 0.3s ease-in-out;
 	border: 1px solid #dddddd;
 }
+@media screen and (max-width:400px) {
+	.saaspik-icon-box-wrapper.style-eleven{
+	padding: 12px 2px;
+
+	}
+}
 .saaspik-icon-box-wrapper.style-eleven .saaspik-icon-box-icon {
 	height: 65px;
 	display: -webkit-box;
