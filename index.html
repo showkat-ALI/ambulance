@@ -943,7 +943,7 @@
         <div class="col-lg-6 col-md-6">
             <div class="saaspik-icon-box-wrapper style-eleven wow fadeInRight" data-wow-delay="0.3s">
                 <div class="pixsass-icon-box-content">
-                    <h3 class="pixsass-icon-box-title"><a href="#">Dhaka North</a></h3>
+                    <h3 class="pixsass-icon-box-title mob"><a href="#">Dhaka North</a></h3>
                     <p class="capsule-container-mm">
                             <span class="capsule-mm">Adabor </span> 
                             <span class="capsule-mm">Badda </span>
@@ -988,7 +988,7 @@
         <div class="col-lg-6 col-md-6">
             <div class="saaspik-icon-box-wrapper style-eleven wow fadeInRight" data-wow-delay="0.3s">
                 <div class="pixsass-icon-box-content">
-                    <h3 class="pixsass-icon-box-title"><a href="#">Dhaka South</a></h3>
+                    <h3 class="pixsass-icon-box-title mob"><a href="#">Dhaka South</a></h3>
                     <p class="capsule-container-mm">
                             <span class="capsule-mm">Bangshal </span> 
                             <span class="capsule-mm">Chawkbazar </span>
@@ -1035,7 +1035,7 @@
         <div class="col-lg-6 col-md-6">
             <div class="saaspik-icon-box-wrapper style-eleven wow fadeInRight" data-wow-delay="0.3s">
                 <div class="pixsass-icon-box-content">
-                    <h3 class="pixsass-icon-box-title"><a href="#">Chittagong</a></h3>
+                    <h3 class="pixsass-icon-box-title mob"><a href="#">Chittagong</a></h3>
                     <p class="capsule-container-mm">
                             <span class="capsule-mm">Akbarshah 
                             </span> <span class="capsule-mm">Bakalia 
@@ -1104,7 +1104,7 @@
         <div class="col-lg-6 col-md-6">
             <div class="saaspik-icon-box-wrapper style-eleven wow fadeInRight" data-wow-delay="0.3s">
                 <div class="pixsass-icon-box-content">
-                    <h3 class="pixsass-icon-box-title"><a href="#">Shyllet</a></h3>
+                    <h3 class="pixsass-icon-box-title mob"><a href="#">Shyllet</a></h3>
                     <p class="capsule-container-mm">
                             <span class="capsule-mm">Kotwali </span>
                             <span class="capsule-mm">Jalalabad</span>
@@ -1136,7 +1136,7 @@
                                 <div id="unique-location-modal" class="unique-modal">
                                     <div class="unique-modal-content">
                                         <span class="unique-close" onclick="closeUniqueLocationModal()">&times;</span>
-                                        <h3 class="modal-heading">More Areas</h3>
+                                        <h3 class="modal-heading sm-title"></h3>
                                         <p id="unique-location-modal-content"></p>
                                     </div>
                                 </div>
@@ -1218,7 +1218,7 @@
                                         cards.forEach(card => {
                                             let extraCapsules = card.querySelectorAll(".capsule-mm.extra");
                                             let seeMoreBtn = card.querySelector(".see-more");
-                                            // let cardTitle = card.querySelector(".pixsass-icon-box-title")?.innerText || "Details";
+                                             let cardTitle = card.querySelector(".mob")?.innerText || "Details";
 
                                             // Hide extra capsules initially
                                             extraCapsules.forEach(capsule => capsule.style.display = "none");
@@ -1230,19 +1230,19 @@
                                                 // Attach event listener to open modal when clicking "See All"
                                                 seeMoreBtn.addEventListener("click", function (event) {
                                                     event.preventDefault();
-                                                    openUniqueLocationModal(extraCapsules);
+                                                    openUniqueLocationModal(extraCapsules,cardTitle);
                                                 });
                                             }
                                         });
                                     });
                                 
-                                    function openUniqueLocationModal(extraCapsules) {
+                                    function openUniqueLocationModal(extraCapsules,title) {
                                         let modal = document.getElementById("unique-location-modal");
                                         let modalContent = document.getElementById("unique-location-modal-content");
-                                        // let modalHeading = document.querySelector(".modal-heading");
+                                        let modalHeading = document.querySelector(".modal-heading.sm-title");
 
                                         modalContent.innerHTML = ""; // Clear previous content
-                                        // modalHeading.innerText = title; 
+                                        modalHeading.innerText = title; 
 
                                         // Show only the first 3 extra items in the modal
                                         for (let i = 0; i < extraCapsules.length; i++) {
@@ -1383,7 +1383,7 @@
                                         <div class="col-lg-6 col-md-6">
                                             <div class="saaspik-icon-box-wrapper style-eleven wow fadeInRight" data-wow-delay="0.3s">
                                                 <div class="pixsass-icon-box-content">
-                                                    <h3 class="pixsass-icon-box-title"><a href="#">Dhaka North</a></h3>
+                                                    <h3 class="pixsass-icon-box-title md-heading"><a href="#">Dhaka North</a></h3>
                                                     <p class="capsule-container">
                                                         <div style="display: flex; flex-wrap: wrap; align-items: center;">
                                                             <span class="capsule-mm">Adabor </span> 
@@ -1430,7 +1430,7 @@
                                         <div class="col-lg-6 col-md-6">
                                             <div class="saaspik-icon-box-wrapper style-eleven wow fadeInRight" data-wow-delay="0.3s">
                                                 <div class="pixsass-icon-box-content">
-                                                    <h3 class="pixsass-icon-box-title"><a href="#">Dhaka South</a></h3>
+                                                    <h3 class="pixsass-icon-box-title md-heading"><a href="#">Dhaka South</a></h3>
                                                     <p class="capsule-container">
                                                         <div style="display: flex; flex-wrap: wrap; align-items: center;">
                                                             <span class="capsule-mm">Bangshal </span> 
@@ -1489,7 +1489,7 @@
                                         <div class="col-lg-6 col-md-6">
                                             <div class="saaspik-icon-box-wrapper style-eleven wow fadeInRight" data-wow-delay="0.3s">
                                                 <div class="pixsass-icon-box-content">
-                                                    <h3 class="pixsass-icon-box-title"><a href="#">Shyllet</a></h3>
+                                                    <h3 class="pixsass-icon-box-title md-heading"><a href="#">Shyllet</a></h3>
                                                     <p class="capsule-container">
                                                         <div style="display: flex; flex-wrap: wrap; align-items: center;">
                                                             <span class="capsule-mm">Kotwali </span>
@@ -1514,7 +1514,7 @@
                                         <div class="col-lg-6 col-md-6">
                                             <div class="saaspik-icon-box-wrapper style-eleven wow fadeInRight" data-wow-delay="0.3s">
                                                 <div class="pixsass-icon-box-content">
-                                                    <h3 class="pixsass-icon-box-title"><a href="#">Chittagong</a></h3>
+                                                    <h3 class="pixsass-icon-box-title md-heading"><a href="#">Chittagong</a></h3>
                                                     <p class="capsule-container">
                                                         <div style="display: flex; flex-wrap: wrap; align-items: center;">
                                                             <span class="capsule-mm">Akbarshah 
@@ -1602,7 +1602,7 @@
 <div id="areas-modal-md" class="modal-md">
     <div class="modal-content-md">
         <span class="close" onclick="closeModal()">&times;</span>
-        <h3>More Areas</h3>
+        <h3 class="md-title"></h3>
         <p id="areas-modal-content-md"></p>
     </div>
 </div>
@@ -1669,6 +1669,7 @@
 
             // Hide extra capsules initially
             extraCapsules.forEach(capsule => capsule.style.display = "none");
+            let cardTitle = card.querySelector(".md-heading")?.innerText || "Details";
 
             // Show "See All" button only if extra capsules exist
             if (extraCapsules.length > 0) {
@@ -1676,17 +1677,19 @@
 
                 // Attach event listener to open modal when clicking "See All"
                 seeMoreBtn.addEventListener("click", function () {
-                    openModal(extraCapsules);
+                    openModal(extraCapsules,cardTitle);
                 });
             }
         });
     });
 
-    function openModal(extraCapsules) {
+    function openModal(extraCapsules,title) {
         let modal = document.getElementById("areas-modal-md");
         let modalContent = document.getElementById("areas-modal-content-md");
+        let modalHeading = document.querySelector(".md-title");
 
         modalContent.innerHTML = ""; // Clear previous content
+        modalHeading.innerText = title; 
 
         // Show only the first 3 extra items in the modal
         for (let i = 0; i < extraCapsules.length; i++) {
