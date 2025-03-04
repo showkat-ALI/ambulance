@@ -18551,14 +18551,14 @@ Download Two
 			font-size: 9px;
 		}
 	}
-     .citycall{
+     /* .citycall{
     	
     	 margin-left: 25px;
     	
     	 padding: 5px 10px;
     	
     	
-    }
+    } */
 
 .headerservice{
 	font-size: 12px;
@@ -18733,6 +18733,15 @@ padding: 1px;
 	  opacity: 0;
 	}
   }
+  @media screen and (min-width:450px) and (max-width:1000px){
+	.phone-call-footer{
+		margin-left: 10px;
+		margin-right:20px;
+	}
+.footer-links-section{
+	display: none;
+}
+  }
   
   @media only screen and (max-width: 768px) {
 	.phone-call  {
@@ -18752,7 +18761,8 @@ padding: 1px;
 	/* Set a proper height */
 	  }
 	  .custom-row-m{
-		margin-left:-30px ;
+		margin-top: 10px;
+		margin-left:10px ;
 	  }
 	  .facebook-media{
 		width:30px !important;
