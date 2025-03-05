@@ -6251,7 +6251,7 @@ select {
 }
 
 .featured-three {
-	padding: 116px 0 120px;
+	/* padding: 116px 0 120px; */
 	background: #fdf8f8;
 	overflow: hidden;
 }
@@ -12056,7 +12056,7 @@ Logo List
 .page-banner {
 	background: #fdf8f8;
 	text-align: center;
-	height: 550px;
+	height: 300px;
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
@@ -12610,7 +12610,7 @@ Logo List
 ## About
 --------------------------------------------------------------*/
 .about {
-	padding-top: 120px;
+	padding-top: 80px;
 }
 
 .about-two {
@@ -12621,7 +12621,7 @@ Logo List
 	padding-right: 130px;
 }
 .about-content .section-title {
-	margin-bottom: 35px;
+	margin-bottom: 20px;
 }
 .about-content p {
 	margin-bottom: 40px;
@@ -18638,8 +18638,8 @@ padding: 1px;
 	margin-left: -10px;
 } */
 .phone-call {
-	width: 50px;
-	height: 50px;
+	width: 30px;
+	height: 30px;
 	
 	background-image: linear-gradient(
 	  to right,
@@ -18653,7 +18653,7 @@ padding: 1px;
 	border-radius: 50%;
 	/* z-index: 10001 !important; */
 	display: inline-block;
-	line-height: 50px;
+	line-height: 30px;
 	transform: scaleX(-1);
 	
   }
@@ -18668,8 +18668,8 @@ padding: 1px;
 	  #82b6b9 25%,
 	  #2f8084 100%
 	) !important;
-	width: 80px;
-	height: 80px;
+	width: 60px;
+	height: 60px;
 	border-radius: 100%;
 	animation-fill-mode: both;
 	-webkit-animation-fill-mode: both;
@@ -18743,7 +18743,7 @@ padding: 1px;
 }
   }
   
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 900px) {
 	.phone-call  {
 	  width: 30px;
 	  height: 30px;
@@ -18751,8 +18751,8 @@ padding: 1px;
 	 
 	}
 	.phone-call:before {
-		top: -25px;
-	left: -25px;
+		top: -15px;
+	left: -15px;
 	  } 
 	  .btn-whatsapp-pulse{
 		width: 30px !important;  /* Set a proper width */
@@ -19042,8 +19042,8 @@ padding: 1px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	width: 50px; /* Set a proper width */
-	height: 50px; /* Set a proper height */
+	width: 30px; /* Set a proper width */
+	height: 30px; /* Set a proper height */
 	padding: 0; /* Remove padding or adjust as needed */
 	text-decoration: none;
 	border-radius: 50%;
@@ -19052,7 +19052,16 @@ padding: 1px;
 	animation-timing-function: ease-out;
 	animation-iteration-count: infinite;
   }
-  
+  @media  screen and (min-width:1200px) {
+	.whatsapp-image{
+		width: 20px;
+		height: 20px;
+	  }
+  }
+  .whatsapp-image{
+	width: 25px;
+	height: 25px;
+  }
   @keyframes pulsee {
 	0% {
 	  box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5);
@@ -19084,11 +19093,11 @@ padding: 1px;
   
   @keyframes pulse-border {
 	0% {
-	  padding: 25px;
+	  padding: 15px;
 	  opacity: 0.65;
 	}
 	75% {
-	  padding: 35px;
+	  padding: 20px;
 	  opacity: 0;
 	}
 	100% {
@@ -19118,8 +19127,8 @@ padding: 1px;
  }
  @media screen and  (min-width:768px) and (max-width:900px) {
 	.phone-call{
-		width: 45px;
-		height: 45px;
+		width: 30px;
+		height: 30px;
 	}
 	
  }

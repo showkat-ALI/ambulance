@@ -1,0 +1,19 @@
+app.css
+
+
+Line 12268
+.page-banner {
+height:300px;
+
+
+
+
+Line 12623
+.about-content .section-title {
+	margin-bottom: 20px;
+}
+
+line 12612
+.about {
+	padding-top: 80px;
+}
